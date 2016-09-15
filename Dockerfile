@@ -6,4 +6,4 @@ RUN apk add --update \
  && npm install -g gulp \
  && rm /var/cache/apk/*
 
-ENTRYPOINT [/bin/sh]
+ENTRYPOINT /bin/sh
