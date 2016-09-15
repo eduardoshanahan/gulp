@@ -3,7 +3,7 @@ FROM eduardoshanahan/node:latest
 RUN apk add --update \
             build-base \
             python \
- && npm install -g bower gulp \
+ && npm install -g gulp \
  && rm /var/cache/apk/*
 
 ENTRYPOINT [/bin/sh]
