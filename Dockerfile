@@ -1,9 +1,11 @@
 FROM eduardoshanahan/node:latest
 
-RUN apk add --update \
-            build-base \
-            python \
- && npm install -g gulp \
- && rm /var/cache/apk/*
+MAINTAINER Eduardo Shanahan <contact@eduardoshanahan.com>
 
-ENTRYPOINT /bin/sh
+RUN apk update \
+&&  apk add --virtual .install_dependencies build-base python \
+&&  npm install -g gulp \
+&&  rm -r /var/cache/apk \
+&&  apk del .install_dependencies
+
+CMD [/bin/sh]
