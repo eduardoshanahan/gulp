@@ -8,4 +8,4 @@ RUN apk update \
 &&  rm -r /var/cache/apk \
 &&  apk del .install_dependencies
 
-CMD [/bin/sh]
+CMD ["/bin/sh"]
