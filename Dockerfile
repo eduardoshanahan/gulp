@@ -1,11 +1,11 @@
-FROM eduardoshanahan/node:latest
+FROM eduardoshanahan/node:6.10.3
 
-MAINTAINER Eduardo Shanahan <contact@eduardoshanahan.com>
+LABEL maintainer 'Eduardo Shanahan <contact@eduardoshanahan.com>'
 
-RUN apk update \
-&&  apk add --virtual .install_dependencies build-base python \
+RUN apk add --virtual .install_dependencies \
+    build-base \
+    python \
 &&  npm install -g gulp \
-&&  rm -r /var/cache/apk \
 &&  apk del .install_dependencies
 
 CMD ["/bin/sh"]

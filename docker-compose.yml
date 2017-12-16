@@ -1,5 +1,7 @@
-version: "2"
+version: "3.4"
+
 services:
+
   shell:
     image: eduardoshanahan/gulp
     container_name: es_gulp
