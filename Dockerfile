@@ -1,4 +1,4 @@
-FROM eduardoshanahan/node:6.10.3
+FROM eduardoshanahan/node:6.10.3.1
 
 LABEL maintainer 'Eduardo Shanahan <contact@eduardoshanahan.com>'
 
